@@ -2,7 +2,8 @@ import ctypes
 import ctypes.util
 
 
-dll = ctypes.util.find_library("libfswatch")
+dll = ctypes.util.find_library("libfswatch") \
+    or ctypes.util.find_library("fswatch")
 lib = ctypes.CDLL(dll)
 
 
